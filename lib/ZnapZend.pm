@@ -305,7 +305,7 @@ my $sendRecvCleanup = sub {
         }
 
         # do not destroy data sets on the destination, or run post-send-command, unless all operations have been successful
-        next if ($sendFailed)
+        next if ($sendFailed);
 
         for my $srcDataSet (@$srcSubDataSets){
             my $dstDataSet = $srcDataSet;
